@@ -50,6 +50,7 @@ public class ClientISO8583 {
         System.out.println("before test connect...");
         if (client.isConnected()) { // [7]
             System.out.println("connecte...");
+            // apres la connexion socket on envoi un sign on
             IsoMessage msg = messageFactory.newMessage(0x1804);
             /**/msg.setType(0x400);
              msg.setValue(3, "111111", IsoType.NUMERIC, 6);
