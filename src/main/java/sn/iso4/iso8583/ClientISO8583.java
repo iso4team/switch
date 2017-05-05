@@ -51,12 +51,12 @@ public class ClientISO8583 {
         if (client.isConnected()) { // [7]
             System.out.println("connecte...");
             IsoMessage msg = messageFactory.newMessage(0x1804);
-            /*msg.setType(0x400);
+            /**/msg.setType(0x400);
              msg.setValue(3, "111111", IsoType.NUMERIC, 6);
              msg.setValue(11, "1455", IsoType.NUMERIC, 6);
              msg.setValue(12, "1455", IsoType.NUMERIC, 6);
              msg.setValue(13, "1455", IsoType.NUMERIC, 4);
-             msg.setValue(102, "Test singe quoi", IsoType.LLVAR, 3);*/
+             msg.setValue(102, "Test singe quoi", IsoType.LLVAR, 3);
 
             client.send(msg);// [8]
         } else {
