@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sn.iso4.iso8583;
+package sn.iso4.iso8583.client;
 
 import com.github.kpavlov.jreactive8583.IsoMessageListener;
 import com.github.kpavlov.jreactive8583.server.Iso8583Server;
@@ -44,9 +44,8 @@ public class ServerISO8583 {
                 System.out.println("message reçu...");
                 final IsoMessage response = server.getIsoMessageFactory().createResponse(t);
                 response.setField(39, IsoType.ALPHA.value("800", 3));
-                //response.setField(70, IsoType.LLLVAR.value("Bien recu", 3));
                 chc.writeAndFlush(response);
-                return false;
+                return true;
             }
 
         });
