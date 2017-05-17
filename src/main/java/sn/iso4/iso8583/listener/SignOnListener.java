@@ -8,6 +8,8 @@ package sn.iso4.iso8583.listener;
 import com.github.kpavlov.jreactive8583.IsoMessageListener;
 import com.solab.iso8583.IsoMessage;
 import io.netty.channel.ChannelHandlerContext;
+import sn.iso4.iso8583.type.ConnexionStatus;
+import sn.iso4.iso8583.utils.SessionList;
 
 /**
  *
@@ -17,7 +19,7 @@ public class SignOnListener implements IsoMessageListener<IsoMessage> {
 
     @Override
     public boolean applies(IsoMessage isoMessage) {
-        return (isoMessage.getType() == 0x0810) || (isoMessage.getType() == 0x1814) || (isoMessage.getType() == 0x0800);
+        return true;//(isoMessage.getType() == 0x0810) || (isoMessage.getType() == 0x1814) || (isoMessage.getType() == 0x0800);
     }
 
     @Override
@@ -25,8 +27,14 @@ public class SignOnListener implements IsoMessageListener<IsoMessage> {
         System.out.println("reponse server reçu...");
         if (i.hasField(39)) {
             System.out.println("Field 39 [" + i.getField(39).getValue().toString() + "]");
+            if ((i.getType() == 0x1814) && i.getField(39).getValue().toString().equals("800")) {
+                System.out.println("[" + i.getType() + "|" + i.getField(39) + "] signON OK...");
+                SessionList.updateSession("192.168.11.51:1011", ConnexionStatus.SIGNON);
+            }
         }
-        return true;
+
+        System.out.println(SessionList.getSession("192.168.11.51:1011").getConnexionStatus());
+        return false;
     }
 
 }

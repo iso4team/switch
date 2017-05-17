@@ -8,7 +8,6 @@ package sn.iso4.iso8583.server;
 import com.github.kpavlov.jreactive8583.IsoMessageListener;
 import com.github.kpavlov.jreactive8583.server.Iso8583Server;
 import com.solab.iso8583.IsoMessage;
-import com.solab.iso8583.IsoType;
 import com.solab.iso8583.MessageFactory;
 import com.solab.iso8583.impl.SimpleTraceGenerator;
 import com.solab.iso8583.parse.ConfigParser;
@@ -24,14 +23,14 @@ public class ServerISO8583 {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         
-        final MessageFactory<IsoMessage> messageFactory = ConfigParser.createDefault();
+        final MessageFactory<IsoMessage> messageFactory = ConfigParser.createFromClasspathConfig("g8583.xml");
         messageFactory.setCharacterEncoding(StandardCharsets.US_ASCII.name());
         messageFactory.setUseBinaryMessages(false);
         messageFactory.setAssignDate(true);
         messageFactory.setTraceNumberGenerator(new SimpleTraceGenerator((int) (System.currentTimeMillis() % 1000000)));
 
         final Iso8583Server<IsoMessage> server = new Iso8583Server<>(1011, messageFactory);
-
+        
         server.addMessageListener(new IsoMessageListener<IsoMessage>() {
 
             @Override
@@ -43,7 +42,7 @@ public class ServerISO8583 {
             public boolean onMessage(ChannelHandlerContext chc, IsoMessage t) {
                 System.out.println("message reçu...");
                 final IsoMessage response = server.getIsoMessageFactory().createResponse(t);
-                response.setField(39, IsoType.ALPHA.value("800", 3));
+                //response.setField(39, IsoType.ALPHA.value("800", 3));
                 chc.writeAndFlush(response);
                 return true;
             }

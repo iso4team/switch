@@ -29,12 +29,13 @@
 
     <!-- sign-on request -->
     <template type="1804">
-        <field num="24" type="ALPHA" length="3">801</field>
+        <field num="24" type="ALPHA" length="3">803</field>
     </template>
 
     <!-- sign-on response -->
     <template type="1814">
         <field num="39" type="ALPHA" length="3">800</field>
+        <field num="24" type="ALPHA" length="3">800</field>
     </template>
     
     <!-- echo request -->
@@ -117,6 +118,8 @@
     
     <!-- sign-on request -->
     <parse type="1804">
+        <field num="7" type="DATE10"/>
+        <field num="11" type="NUMERIC" length="6"/>
         <field num="24" type="ALPHA" length="3"/>
     </parse>
 

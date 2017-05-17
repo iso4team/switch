@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE j8583-config PUBLIC "-//J8583//DTD CONFIG 1.0//EN""http://j8583.sourceforge.net/j8583.dtd">
+<j8583-config>
+    <!-- This is a test config file -->
+
+    <!-- header (1804,1814) -->
+    <header type="1804">0036ISO60100000</header>
+    <header type="1814">0036ISO60100000</header>
+    
+    <!-- Template (1804,1814) -->
+    <template type="1804">
+        <field num="7"   type="DATE10"></field>
+        <field num="11"  type="NUMERIC" length="6">125</field> 
+        <field num="12"  type="TIME"></field>
+        <field num="24"  type="LLLVAR">Test1</field>
+        <field num="25"  type="LLLVAR">Test1</field> 
+        <field num="33"  type="LLLVAR">Test1</field> 
+        <field num="37"  type="NUMERIC" length="12">3333</field>
+        <field num="48"  type="LLLVAR">Test1</field>
+        <field num="128" type="LLLVAR">Test2</field>
+    </template>
+    <template type="1814">                   
+        <field num="7"   type="DATE10"></field>
+        <field num="11"  type="NUMERIC" length="6">11111</field>  
+        <field num="12"  type="TIME"></field> 
+        <field num="33"  type="LLLVAR">Test</field> 
+        <field num="37"  type="NUMERIC" length="12">2222</field>
+        <field num="39"  type="LLLVAR">Test1</field> 
+        <field num="48"  type="LLLVAR">Test2</field>
+        <field num="128" type="LLLVAR">Test3</field>                                                                                    
+    </template>
+    
+    <!-- Parse (1804,1814) -->
+    <parse type="1804">
+        <field num="7"   type="DATE10"/>
+        <field num="11"  type="NUMERIC" length="6"/>  
+        <field num="12"  type="TIME"/>  
+        <field num="24"  type="LLLVAR"/>
+        <field num="25"  type="LLLVAR"/> 
+        <field num="33"  type="LLLVAR"/> 
+        <field num="37"  type="NUMERIC" length="12"/>
+        <field num="48"  type="LLLVAR"/>
+        <field num="128" type="LLLVAR"/>
+    </parse>
+    <parse type="1814">                   
+        <field num="7"   type="DATE10"/>
+        <field num="11"  type="NUMERIC" length="6"/>  
+        <field num="12"  type="TIME"/> 
+        <field num="33"  type="LLLVAR"/> 
+        <field num="37"  type="NUMERIC" length="12"/>
+        <field num="39"  type="LLLVAR"/> 
+        <field num="48"  type="LLLVAR"/>
+        <field num="128" type="LLLVAR"/>                                                                                      
+    </parse>
+
+    <!-- The server example uses this to read the requests -->
+    <parse type="0200">
+        <field num="3" type="NUMERIC" length="6" />
+        <field num="4" type="AMOUNT" />
+        <field num="7" type="DATE10" />
+        <field num="11" type="NUMERIC" length="6" />
+        <field num="12" type="TIME" />
+        <field num="13" type="DATE4" />
+        <field num="15" type="DATE4" />
+        <field num="17" type="DATE_EXP" />
+        <field num="32" type="LLVAR" />
+        <field num="35" type="LLVAR" />
+        <field num="37" type="NUMERIC" length="12" />
+        <field num="41" type="ALPHA" length="16" />
+        <field num="43" type="ALPHA" length="40" />
+        <field num="48" type="LLLVAR" />
+        <field num="49" type="ALPHA" length="3" />
+        <field num="60" type="LLLVAR" />
+        <field num="61" type="LLLVAR" />
+        <field num="100" type="LLVAR" />
+        <field num="102" type="LLVAR" />
+    </parse>
+
+    <!-- The client example uses this to read the responses -->
+    <parse type="0210">
+        <field num="3" type="NUMERIC" length="6" />
+        <field num="4" type="AMOUNT" />
+        <field num="7" type="DATE10" />
+        <field num="11" type="NUMERIC" length="6" />
+        <field num="12" type="TIME" />
+        <field num="13" type="DATE4" />
+        <field num="15" type="DATE4" />
+        <field num="17" type="DATE_EXP" />
+        <field num="32" type="LLVAR" />
+        <field num="35" type="LLVAR" />
+        <field num="37" type="NUMERIC" length="12" />
+        <field num="38" type="NUMERIC" length="6" />
+        <field num="39" type="NUMERIC" length="2" />
+        <field num="41" type="ALPHA" length="16" />
+        <field num="43" type="ALPHA" length="40" />
+        <field num="48" type="LLLVAR" />
+        <field num="49" type="ALPHA" length="3" />
+        <field num="60" type="LLLVAR" />
+        <field num="61" type="LLLVAR" />
+        <field num="70" type="ALPHA" length="3" />
+        <field num="90" type="ALPHA" length="42" />
+        <field num="100" type="LLVAR" />
+        <field num="102" type="LLVAR" />
+        <field num="126" type="LLLVAR" />
+    </parse>
+
+    <!-- this is for binary tests (message encoding AND fields) -->
+    <parse type="0600">
+        <field num="4" type="AMOUNT" />
+        <field num="7" type="DATE10" />
+        <field num="11" type="NUMERIC" length="6" />
+        <field num="41" type="BINARY" length="8" />
+        <field num="42" type="BINARY" length="4" />
+        <field num="43" type="ALPHA" length="40" />
+        <field num="62" type="LLBIN" />
+        <field num="63" type="LLBIN" />
+        <field num="64" type="LLLBIN" />
+        <field num="65" type="LLLBIN" />
+        <field num="102" type="LLLVAR" />
+    </parse>
+
+    <parse type="0800">
+        <field num="3" type="ALPHA" length="6">123456</field>
+        <field num="12" type="DATE4">1231</field>
+        <field num="17" type="DATE4">1231</field>
+    </parse>
+
+    <parse type="0810" extends="0800">
+        <field num="17" type="exclude"/>
+        <field num="39" type="ALPHA" length="2"/>
+    </parse>
+
+    <parse type="0201">
+        <field num="3" type="NUMERIC" length="19" />
+    </parse>
+    
+    <parse type="0202">
+        <field num="3" type="NUMERIC" length="22" />
+    </parse>
+    
+    <parse type="0280">
+        <field num="3" type="NUMERIC" length="2" />
+    </parse>
+
+</j8583-config>
