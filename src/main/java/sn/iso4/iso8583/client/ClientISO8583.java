@@ -41,7 +41,9 @@ public class ClientISO8583 {
 
         // - Create and init Iso8583Client
         Iso8583Client<IsoMessage> client = new Iso8583Client<>(new InetSocketAddress(IsoConfig.SERVER_IP, IsoConfig.SERVER_PORT), configuration, messageFactory);
-        client.addMessageListener(new SignOnListener());
+        // - Add listeners
+        client.addMessageListener(new SignOnListener(client));
+        
         client.getConfiguration().replyOnError();
         client.init();
         client.connect();
@@ -51,6 +53,7 @@ public class ClientISO8583 {
             System.out.println("connecte...");
             SessionList.addSession(IsoConfig.SERVER_IP, new Session(IsoConfig.SERVER_IP, 80, IsoConfig.SERVER_IP, IsoConfig.SERVER_PORT, ConnexionStatus.SIGNOFF, ConnexionType.CLIENT2SERVER));
             
+            // - Send first request
             IsoMessage msg = messageFactory.newMessage(0x1804);
             msg.setField(24, IsoType.ALPHA.value("800", 3));
             

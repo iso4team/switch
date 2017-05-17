@@ -6,8 +6,11 @@
 package sn.iso4.iso8583.listener;
 
 import com.github.kpavlov.jreactive8583.IsoMessageListener;
+import com.github.kpavlov.jreactive8583.client.Iso8583Client;
 import com.solab.iso8583.IsoMessage;
 import io.netty.channel.ChannelHandlerContext;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import sn.iso4.iso8583.type.ConnexionStatus;
 import sn.iso4.iso8583.utils.SessionList;
 
@@ -16,6 +19,12 @@ import sn.iso4.iso8583.utils.SessionList;
  * @author <ahmet.thiam@wari.com>
  */
 public class SignOnListener implements IsoMessageListener<IsoMessage> {
+
+    private final Iso8583Client<IsoMessage> client;
+
+    public SignOnListener(Iso8583Client<IsoMessage> client) {
+        this.client = client;
+    }
 
     @Override
     public boolean applies(IsoMessage isoMessage) {
@@ -32,7 +41,9 @@ public class SignOnListener implements IsoMessageListener<IsoMessage> {
                 SessionList.updateSession("192.168.11.51:1011", ConnexionStatus.SIGNON);
             }
         }
-
+        // - send response
+        ctx.writeAndFlush(client.getIsoMessageFactory().createResponse(i));
+        
         System.out.println(SessionList.getSession("192.168.11.51:1011").getConnexionStatus());
         return false;
     }
