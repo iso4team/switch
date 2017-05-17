@@ -10,7 +10,9 @@ package sn.iso4.iso8583.utils;
  * All utils
  *
  * @author <ahmet.thiam@wari.com>
+ * @update Harouna SOUMARE <runkaou@gmail.com>
  */
+
 public class Util {
     
     public static boolean isValid(){
