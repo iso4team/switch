@@ -30,17 +30,17 @@ public class ClientISO8583 {
     public static void main(String[] args) throws IOException, InterruptedException {
         
         // - Create messageFactory
-        MessageFactory<IsoMessage> messageFactory = ConfigParser.createFromClasspathConfig("g8583.xml");
+        MessageFactory<IsoMessage> messageFactory = ConfigParser.createFromClasspathConfig("j8583.xml");
 
         // - Create ClientConfiguration
-        final ClientConfiguration configuration = ClientConfiguration.newBuilder()
+        /*final ClientConfiguration configuration = ClientConfiguration.newBuilder()
                 .withIdleTimeout(60)
                 .withReconnectInterval(10)
                 .withLogSensitiveData(true)
-                .build();
+                .build();*/
 
         // - Create and init Iso8583Client
-        Iso8583Client<IsoMessage> client = new Iso8583Client<>(new InetSocketAddress(IsoConfig.SERVER_IP, IsoConfig.SERVER_PORT), configuration, messageFactory);
+        Iso8583Client<IsoMessage> client = new Iso8583Client<>(new InetSocketAddress(IsoConfig.SERVER_IP, IsoConfig.SERVER_PORT), messageFactory);
         // - Add listeners
         client.addMessageListener(new SignOnListener(client));
         
@@ -53,10 +53,15 @@ public class ClientISO8583 {
             System.out.println("connecte...");
             SessionList.addSession(IsoConfig.SERVER_IP, new Session(IsoConfig.SERVER_IP, 80, IsoConfig.SERVER_IP, IsoConfig.SERVER_PORT, ConnexionStatus.SIGNOFF, ConnexionType.CLIENT2SERVER));
             
+<<<<<<< HEAD
             // - Send first request sign on
             IsoMessage msg = BuildRequest.buildSignOnRequestMessage(); //messageFactory.newMessage(0x1804);
             
             //msg.setField(24, IsoType.ALPHA.value("800", 3));
+=======
+            // - Send first request
+            IsoMessage msg = messageFactory.newMessage(0x1804);
+>>>>>>> branch 'master' of https://github.com/iso4team/switch.git
             
             client.send(msg);
         } else {

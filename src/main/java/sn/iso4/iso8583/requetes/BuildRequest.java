@@ -13,6 +13,7 @@ public class BuildRequest {
 	       
 		   msg.setValue(7,  tbx.getNow2(), IsoType.DATE10,0);  
 		   msg.setValue(11, 789654,IsoType.NUMERIC,6); 
+		   dd
 		   msg.setValue(12, tbx.getNow(), IsoType.DATETIME,0); 
 		   msg.setValue(24,801, IsoType.NUMERIC,3);  
 		   msg.setValue(25,8010, IsoType.NUMERIC,4);  
