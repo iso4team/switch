@@ -23,7 +23,7 @@ public class ServerISO8583 {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         
-        final MessageFactory<IsoMessage> messageFactory = ConfigParser.createFromClasspathConfig("g8583.xml");
+        final MessageFactory<IsoMessage> messageFactory = ConfigParser.createFromClasspathConfig("j8583.xml");
         messageFactory.setCharacterEncoding(StandardCharsets.US_ASCII.name());
         messageFactory.setUseBinaryMessages(false);
         messageFactory.setAssignDate(true);

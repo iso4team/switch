@@ -28,7 +28,7 @@ public class SignOnListener implements IsoMessageListener<IsoMessage> {
 
     @Override
     public boolean applies(IsoMessage isoMessage) {
-        return true;//(isoMessage.getType() == 0x0810) || (isoMessage.getType() == 0x1814) || (isoMessage.getType() == 0x0800);
+        return isoMessage.getType() == 0x1814;
     }
 
     @Override
@@ -38,13 +38,13 @@ public class SignOnListener implements IsoMessageListener<IsoMessage> {
             System.out.println("Field 39 [" + i.getField(39).getValue().toString() + "]");
             if ((i.getType() == 0x1814) && i.getField(39).getValue().toString().equals("800")) {
                 System.out.println("[" + i.getType() + "|" + i.getField(39) + "] signON OK...");
-                SessionList.updateSession("192.168.11.51:1011", ConnexionStatus.SIGNON);
+                SessionList.updateSession("192.168.11.51", ConnexionStatus.SIGNON);
             }
         }
         // - send response
         ctx.writeAndFlush(client.getIsoMessageFactory().createResponse(i));
         
-        System.out.println(SessionList.getSession("192.168.11.51:1011").getConnexionStatus());
+        System.out.println(SessionList.getSession("192.168.11.51").getConnexionStatus());
         return false;
     }
 
