@@ -40,9 +40,9 @@ public class ServerISO8583 {
 
             @Override
             public boolean onMessage(ChannelHandlerContext chc, IsoMessage t) {
-                System.out.println("message reçu...");
+                System.out.println(String.format("message [%d] reçu", t.getType()));
+                
                 final IsoMessage response = server.getIsoMessageFactory().createResponse(t);
-                //response.setField(39, IsoType.ALPHA.value("800", 3));
                 chc.writeAndFlush(response);
                 return true;
             }

@@ -42,7 +42,8 @@ public class SignOnListener implements IsoMessageListener<IsoMessage> {
             }
         }
         // - send response
-        ctx.writeAndFlush(client.getIsoMessageFactory().createResponse(i));
+        IsoMessage msg = client.getIsoMessageFactory().newMessage(0x1814);
+        ctx.writeAndFlush(msg);
         
         System.out.println(SessionList.getSession("192.168.11.51").getConnexionStatus());
         return false;

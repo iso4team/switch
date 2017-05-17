@@ -54,9 +54,10 @@ public class ClientISO8583 {
             SessionList.addSession(IsoConfig.SERVER_IP, new Session(IsoConfig.SERVER_IP, 80, IsoConfig.SERVER_IP, IsoConfig.SERVER_PORT, ConnexionStatus.SIGNOFF, ConnexionType.CLIENT2SERVER));
             
             // - Send first request sign on
-            IsoMessage msg = BuildRequest.buildSignOnRequestMessage(); //messageFactory.newMessage(0x1804);
+            //IsoMessage msg = BuildRequest.buildSignOnRequestMessage(); //
             
-            //msg.setField(24, IsoType.ALPHA.value("800", 3));
+            IsoMessage msg = messageFactory.newMessage(0x1804);
+            msg.setField(24, IsoType.ALPHA.value("800", 3));
             // - Send first request
             //IsoMessage msg = messageFactory.newMessage(0x1804);
             
