@@ -5,8 +5,8 @@
     <!-- This is a test config file -->
 
     <!-- header (1804,1814) -->
-    <header type="1804">0036ISO60100000</header>
-    <header type="1814">0036ISO60100000</header>
+    <header type="1804">1804ISO60100000</header>
+    <header type="1814">1814ISO60100000</header>
     
     <!-- Template (1804,1814) -->
     <template type="1804">

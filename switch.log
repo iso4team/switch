@@ -1234,3 +1234,578 @@ java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
 17/05/2017 à 08:30:20 [INFO ] [Iso8583Client.java:connectAsync:88] Connecting to /192.168.11.51:1011
 17/05/2017 à 08:30:20 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x002e66aa] REGISTERED
 17/05/2017 à 08:30:20 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x002e66aa] CONNECT: /192.168.11.51:1011
+17/05/2017 à 08:40:40 [DEBUG] [ConfigParser.java:createFromClasspathConfig:88] ISO8583 Parsing config from classpath file g8583.xml
+17/05/2017 à 08:40:41 [INFO ] [AbstractIso8583Connector.java:init:69] Initializing
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:71] Using SLF4J as the default logging framework
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.eventLoopThreads: 8
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.noUnsafe: false
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:71] sun.misc.Unsafe.theUnsafe: available
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:71] sun.misc.Unsafe.copyMemory: available
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:71] java.nio.Buffer.address: available
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:71] direct buffer constructor: available
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:76] java.nio.Bits.unaligned: available, true
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:76] java.nio.DirectByteBuffer.<init>(long, int): available
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:71] java.nio.ByteBuffer.cleaner(): available
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:71] Platform: Windows
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:76] Java version: 8
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:76] sun.misc.Unsafe: available
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.tmpdir: C:\Users\hp\AppData\Local\Temp (java.io.tmpdir)
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.noPreferDirect: false
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:76] io.netty.maxDirectMemory: 1897922560 bytes
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.noKeySetOptimization: false
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.selectorAutoRebuildThreshold: 512
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:71] org.jctools-core.MpscChunkedArrayQueue: available
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.processId: 7604 (auto-detected)
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:76] -Djava.net.preferIPv4Stack: false
+17/05/2017 à 08:40:41 [DEBUG] [Slf4JLogger.java:debug:76] -Djava.net.preferIPv6Addresses: false
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:86] Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:81] \proc\sys\net\core\somaxconn: 200 (non-existent)
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.machineId: 3c:d9:2b:ff:fe:25:f6:29 (auto-detected)
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:81] -Dio.netty.leakDetection.level: simple
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:81] -Dio.netty.leakDetection.maxRecords: 4
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.numHeapArenas: 8
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.numDirectArenas: 8
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.pageSize: 8192
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.maxOrder: 11
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.chunkSize: 16777216
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.tinyCacheSize: 512
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.smallCacheSize: 256
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.normalCacheSize: 64
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.cacheTrimInterval: 8192
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.useCacheForAllThreads: true
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.type: pooled
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.threadLocalDirectBufferSize: 65536
+17/05/2017 à 08:40:42 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17/05/2017 à 08:40:42 [WARN ] [Slf4JLogger.java:warn:146] Unknown channel option 'TCP_NODELAY' for channel '[id: 0x46c8b530]'
+17/05/2017 à 08:40:42 [INFO ] [Iso8583Server.java:lambda$start$0:32] Server is started and listening at /0:0:0:0:0:0:0:0:1011
+17/05/2017 à 08:40:54 [DEBUG] [ConfigParser.java:createFromClasspathConfig:88] ISO8583 Parsing config from classpath file g8583.xml
+17/05/2017 à 08:40:55 [INFO ] [AbstractIso8583Connector.java:init:69] Initializing
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:71] Using SLF4J as the default logging framework
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.eventLoopThreads: 8
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.noUnsafe: false
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:71] sun.misc.Unsafe.theUnsafe: available
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:71] sun.misc.Unsafe.copyMemory: available
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:71] java.nio.Buffer.address: available
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:71] direct buffer constructor: available
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:76] java.nio.Bits.unaligned: available, true
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:76] java.nio.DirectByteBuffer.<init>(long, int): available
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:71] java.nio.ByteBuffer.cleaner(): available
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:71] Platform: Windows
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:76] Java version: 8
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:76] sun.misc.Unsafe: available
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.tmpdir: C:\Users\hp\AppData\Local\Temp (java.io.tmpdir)
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.noPreferDirect: false
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:76] io.netty.maxDirectMemory: 1897922560 bytes
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.noKeySetOptimization: false
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.selectorAutoRebuildThreshold: 512
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:71] org.jctools-core.MpscChunkedArrayQueue: available
+17/05/2017 à 08:40:55 [INFO ] [Iso8583Client.java:connectAsync:88] Connecting to /192.168.11.51:1011
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.processId: 4808 (auto-detected)
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:76] -Djava.net.preferIPv4Stack: false
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:76] -Djava.net.preferIPv6Addresses: false
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:86] Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+17/05/2017 à 08:40:55 [DEBUG] [Slf4JLogger.java:debug:81] \proc\sys\net\core\somaxconn: 200 (non-existent)
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.machineId: 3c:d9:2b:ff:fe:25:f6:29 (auto-detected)
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:81] -Dio.netty.leakDetection.level: simple
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:81] -Dio.netty.leakDetection.maxRecords: 4
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.numHeapArenas: 8
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.numDirectArenas: 8
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.pageSize: 8192
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.maxOrder: 11
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.chunkSize: 16777216
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.tinyCacheSize: 512
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.smallCacheSize: 256
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.normalCacheSize: 64
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.cacheTrimInterval: 8192
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.useCacheForAllThreads: true
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.type: pooled
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.threadLocalDirectBufferSize: 65536
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x6cdb8b3b] REGISTERED
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x6cdb8b3b] CONNECT: /192.168.11.51:1011
+17/05/2017 à 08:40:56 [INFO ] [Iso8583Client.java:lambda$connectAsync$0:98] Client is connected to /192.168.11.51:1011
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x6cdb8b3b, L:/192.168.11.51:61773 - R:/192.168.11.51:1011] ACTIVE
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.recycler.maxCapacityPerThread: 32768
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.recycler.maxSharedCapacityFactor: 2
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.recycler.linkCapacity: 16
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.recycler.ratio: 8
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x38661c39, L:/192.168.11.51:1011 - R:/192.168.11.51:61773] REGISTERED
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x38661c39, L:/192.168.11.51:1011 - R:/192.168.11.51:61773] REGISTERED
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x38661c39, L:/192.168.11.51:1011 - R:/192.168.11.51:61773] ACTIVE
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x38661c39, L:/192.168.11.51:1011 - R:/192.168.11.51:61773] ACTIVE
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x6cdb8b3b, L:/192.168.11.51:61773 - R:/192.168.11.51:1011] WRITE: Message: 0036ISO601000001804823001808801000000000000000000011224500012512245800005Test1005Test1000000003333005Test1005Test2
+MTI: 0x1804
+  7: [Transmission date & time:DATE10(10)] = '12245'
+  11: [System trace audit number:NUMERIC(6)] = '000125'
+  12: [Time, local transaction (hhmmss):TIME(6)] = '12245'
+  24: [Function code (ISO 8583:1993)/Network International identifier (NII):ALPHA(3)] = '800'
+  25: [Point of service condition code:LLLVAR(5)] = 'Test1'
+  33: [Forwarding institution identification code:LLLVAR(5)] = 'Test1'
+  37: [Retrieval reference number:NUMERIC(12)] = '000000003333'
+  48: [Additional data - private:LLLVAR(5)] = 'Test1'
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x6cdb8b3b, L:/192.168.11.51:61773 - R:/192.168.11.51:1011] FLUSH
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:81] -Dio.netty.buffer.bytebuf.checkAccessible: true
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@36065aad
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.recycler.maxCapacityPerThread: 32768
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.recycler.maxSharedCapacityFactor: 2
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.recycler.linkCapacity: 16
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.recycler.ratio: 8
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:81] -Dio.netty.buffer.bytebuf.checkAccessible: true
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:76] Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@72987f3b
+17/05/2017 à 08:40:56 [ERROR] [MessageFactory.java:parseMessage:433] ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245800005Test1005Test1000000003333005Test1005Test2]
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:91] [id: 0x38661c39, L:/192.168.11.51:1011 - R:/192.168.11.51:61773] EXCEPTION: io.netty.handler.codec.DecoderException: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245800005Test1005Test1000000003333005Test1005Test2]
+io.netty.handler.codec.DecoderException: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245800005Test1005Test1000000003333005Test1005Test2]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:442)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:624)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:559)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:476)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245800005Test1005Test1000000003333005Test1005Test2]
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:435)
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:298)
+	at com.github.kpavlov.jreactive8583.netty.codec.Iso8583Decoder.decode(Iso8583Decoder.java:29)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	... 21 more
+17/05/2017 à 08:40:56 [DEBUG] [Slf4JLogger.java:debug:91] [id: 0x38661c39, L:/192.168.11.51:1011 - R:/192.168.11.51:61773] EXCEPTION: io.netty.handler.codec.DecoderException: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245800005Test1005Test1000000003333005Test1005Test2]
+io.netty.handler.codec.DecoderException: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245800005Test1005Test1000000003333005Test1005Test2]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:442)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:624)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:559)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:476)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245800005Test1005Test1000000003333005Test1005Test2]
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:435)
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:298)
+	at com.github.kpavlov.jreactive8583.netty.codec.Iso8583Decoder.decode(Iso8583Decoder.java:29)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	... 21 more
+17/05/2017 à 08:40:56 [WARN ] [Slf4JLogger.java:warn:151] An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245800005Test1005Test1000000003333005Test1005Test2]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:442)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:624)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:559)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:476)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245800005Test1005Test1000000003333005Test1005Test2]
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:435)
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:298)
+	at com.github.kpavlov.jreactive8583.netty.codec.Iso8583Decoder.decode(Iso8583Decoder.java:29)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	... 21 more
+17/05/2017 à 08:41:26 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x38661c39, L:/192.168.11.51:1011 - R:/192.168.11.51:61773] WRITE: Message: 0036ISO60100000180482300180880100000000000000000001051708412644111912245005Test1005Test1005Test1000000003333005Test1005Test2
+MTI: 0x1804
+  7: [Transmission date & time:DATE10(10)] = '0517084126'
+  11: [System trace audit number:NUMERIC(6)] = '441119'
+  12: [Time, local transaction (hhmmss):TIME(6)] = '12245'
+  24: [Function code (ISO 8583:1993)/Network International identifier (NII):LLLVAR(5)] = 'Test1'
+  25: [Point of service condition code:LLLVAR(5)] = 'Test1'
+  33: [Forwarding institution identification code:LLLVAR(5)] = 'Test1'
+  37: [Retrieval reference number:NUMERIC(12)] = '000000003333'
+  48: [Additional data - private:LLLVAR(5)] = 'Test1'
+17/05/2017 à 08:41:26 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x38661c39, L:/192.168.11.51:1011 - R:/192.168.11.51:61773] WRITE: Message: 0036ISO60100000180482300180880100000000000000000001051708412644111912245005Test1005Test1005Test1000000003333005Test1005Test2
+MTI: 0x1804
+  7: [Transmission date & time:DATE10(10)] = '0517084126'
+  11: [System trace audit number:NUMERIC(6)] = '441119'
+  12: [Time, local transaction (hhmmss):TIME(6)] = '12245'
+  24: [Function code (ISO 8583:1993)/Network International identifier (NII):LLLVAR(5)] = 'Test1'
+  25: [Point of service condition code:LLLVAR(5)] = 'Test1'
+  33: [Forwarding institution identification code:LLLVAR(5)] = 'Test1'
+  37: [Retrieval reference number:NUMERIC(12)] = '000000003333'
+  48: [Additional data - private:LLLVAR(5)] = 'Test1'
+17/05/2017 à 08:41:26 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x38661c39, L:/192.168.11.51:1011 - R:/192.168.11.51:61773] FLUSH
+17/05/2017 à 08:41:26 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x38661c39, L:/192.168.11.51:1011 - R:/192.168.11.51:61773] FLUSH
+17/05/2017 à 08:41:26 [ERROR] [MessageFactory.java:parseMessage:433] ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO60100000180482300180880100000000000000000001051708412644111912245005Test1005Test1005Test1000000003333005Test1005Test2]
+17/05/2017 à 08:41:26 [DEBUG] [Slf4JLogger.java:debug:91] [id: 0x6cdb8b3b, L:/192.168.11.51:61773 - R:/192.168.11.51:1011] EXCEPTION: io.netty.handler.codec.DecoderException: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO60100000180482300180880100000000000000000001051708412644111912245005Test1005Test1005Test1000000003333005Test1005Test2]
+io.netty.handler.codec.DecoderException: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO60100000180482300180880100000000000000000001051708412644111912245005Test1005Test1005Test1000000003333005Test1005Test2]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:442)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:624)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:559)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:476)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO60100000180482300180880100000000000000000001051708412644111912245005Test1005Test1005Test1000000003333005Test1005Test2]
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:435)
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:298)
+	at com.github.kpavlov.jreactive8583.netty.codec.Iso8583Decoder.decode(Iso8583Decoder.java:29)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	... 21 more
+17/05/2017 à 08:41:26 [WARN ] [Slf4JLogger.java:warn:151] An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO60100000180482300180880100000000000000000001051708412644111912245005Test1005Test1005Test1000000003333005Test1005Test2]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:442)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:624)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:559)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:476)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO60100000180482300180880100000000000000000001051708412644111912245005Test1005Test1005Test1000000003333005Test1005Test2]
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:435)
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:298)
+	at com.github.kpavlov.jreactive8583.netty.codec.Iso8583Decoder.decode(Iso8583Decoder.java:29)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	... 21 more
+17/05/2017 à 08:41:56 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x38661c39, L:/192.168.11.51:1011 - R:/192.168.11.51:61773] WRITE: Message: 0036ISO60100000180482300180880100000000000000000001051708415644112012245005Test1005Test1005Test1000000003333005Test1005Test2
+MTI: 0x1804
+  7: [Transmission date & time:DATE10(10)] = '0517084156'
+  11: [System trace audit number:NUMERIC(6)] = '441120'
+  12: [Time, local transaction (hhmmss):TIME(6)] = '12245'
+  24: [Function code (ISO 8583:1993)/Network International identifier (NII):LLLVAR(5)] = 'Test1'
+  25: [Point of service condition code:LLLVAR(5)] = 'Test1'
+  33: [Forwarding institution identification code:LLLVAR(5)] = 'Test1'
+  37: [Retrieval reference number:NUMERIC(12)] = '000000003333'
+  48: [Additional data - private:LLLVAR(5)] = 'Test1'
+17/05/2017 à 08:41:56 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x38661c39, L:/192.168.11.51:1011 - R:/192.168.11.51:61773] WRITE: Message: 0036ISO60100000180482300180880100000000000000000001051708415644112012245005Test1005Test1005Test1000000003333005Test1005Test2
+MTI: 0x1804
+  7: [Transmission date & time:DATE10(10)] = '0517084156'
+  11: [System trace audit number:NUMERIC(6)] = '441120'
+  12: [Time, local transaction (hhmmss):TIME(6)] = '12245'
+  24: [Function code (ISO 8583:1993)/Network International identifier (NII):LLLVAR(5)] = 'Test1'
+  25: [Point of service condition code:LLLVAR(5)] = 'Test1'
+  33: [Forwarding institution identification code:LLLVAR(5)] = 'Test1'
+  37: [Retrieval reference number:NUMERIC(12)] = '000000003333'
+  48: [Additional data - private:LLLVAR(5)] = 'Test1'
+17/05/2017 à 08:41:56 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x38661c39, L:/192.168.11.51:1011 - R:/192.168.11.51:61773] FLUSH
+17/05/2017 à 08:41:56 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x38661c39, L:/192.168.11.51:1011 - R:/192.168.11.51:61773] FLUSH
+17/05/2017 à 08:41:56 [ERROR] [MessageFactory.java:parseMessage:433] ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO60100000180482300180880100000000000000000001051708415644112012245005Test1005Test1005Test1000000003333005Test1005Test2]
+17/05/2017 à 08:41:56 [DEBUG] [Slf4JLogger.java:debug:91] [id: 0x6cdb8b3b, L:/192.168.11.51:61773 - R:/192.168.11.51:1011] EXCEPTION: io.netty.handler.codec.DecoderException: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO60100000180482300180880100000000000000000001051708415644112012245005Test1005Test1005Test1000000003333005Test1005Test2]
+io.netty.handler.codec.DecoderException: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO60100000180482300180880100000000000000000001051708415644112012245005Test1005Test1005Test1000000003333005Test1005Test2]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:442)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:624)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:559)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:476)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO60100000180482300180880100000000000000000001051708415644112012245005Test1005Test1005Test1000000003333005Test1005Test2]
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:435)
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:298)
+	at com.github.kpavlov.jreactive8583.netty.codec.Iso8583Decoder.decode(Iso8583Decoder.java:29)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	... 21 more
+17/05/2017 à 08:41:56 [WARN ] [Slf4JLogger.java:warn:151] An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO60100000180482300180880100000000000000000001051708415644112012245005Test1005Test1005Test1000000003333005Test1005Test2]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:442)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:624)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:559)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:476)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO60100000180482300180880100000000000000000001051708415644112012245005Test1005Test1005Test1000000003333005Test1005Test2]
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:435)
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:298)
+	at com.github.kpavlov.jreactive8583.netty.codec.Iso8583Decoder.decode(Iso8583Decoder.java:29)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	... 21 more
+17/05/2017 à 08:41:56 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x6cdb8b3b, L:/192.168.11.51:61773 - R:/192.168.11.51:1011] WRITE: Message: 0036ISO601000001804823001808801000000000000000000011224500012512245005Test1005Test1005Test1000000003333005Test1005Test2
+MTI: 0x1804
+  7: [Transmission date & time:DATE10(10)] = '12245'
+  11: [System trace audit number:NUMERIC(6)] = '000125'
+  12: [Time, local transaction (hhmmss):TIME(6)] = '12245'
+  24: [Function code (ISO 8583:1993)/Network International identifier (NII):LLLVAR(5)] = 'Test1'
+  25: [Point of service condition code:LLLVAR(5)] = 'Test1'
+  33: [Forwarding institution identification code:LLLVAR(5)] = 'Test1'
+  37: [Retrieval reference number:NUMERIC(12)] = '000000003333'
+  48: [Additional data - private:LLLVAR(5)] = 'Test1'
+17/05/2017 à 08:41:56 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x6cdb8b3b, L:/192.168.11.51:61773 - R:/192.168.11.51:1011] FLUSH
+17/05/2017 à 08:41:56 [ERROR] [MessageFactory.java:parseMessage:433] ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245005Test1005Test1005Test1000000003333005Test1005Test2]
+17/05/2017 à 08:41:56 [DEBUG] [Slf4JLogger.java:debug:91] [id: 0x38661c39, L:/192.168.11.51:1011 - R:/192.168.11.51:61773] EXCEPTION: io.netty.handler.codec.DecoderException: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245005Test1005Test1005Test1000000003333005Test1005Test2]
+io.netty.handler.codec.DecoderException: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245005Test1005Test1005Test1000000003333005Test1005Test2]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:442)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:624)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:559)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:476)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245005Test1005Test1005Test1000000003333005Test1005Test2]
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:435)
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:298)
+	at com.github.kpavlov.jreactive8583.netty.codec.Iso8583Decoder.decode(Iso8583Decoder.java:29)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	... 21 more
+17/05/2017 à 08:41:56 [DEBUG] [Slf4JLogger.java:debug:91] [id: 0x38661c39, L:/192.168.11.51:1011 - R:/192.168.11.51:61773] EXCEPTION: io.netty.handler.codec.DecoderException: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245005Test1005Test1005Test1000000003333005Test1005Test2]
+io.netty.handler.codec.DecoderException: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245005Test1005Test1005Test1000000003333005Test1005Test2]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:442)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:624)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:559)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:476)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245005Test1005Test1005Test1000000003333005Test1005Test2]
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:435)
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:298)
+	at com.github.kpavlov.jreactive8583.netty.codec.Iso8583Decoder.decode(Iso8583Decoder.java:29)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	... 21 more
+17/05/2017 à 08:41:56 [WARN ] [Slf4JLogger.java:warn:151] An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245005Test1005Test1005Test1000000003333005Test1005Test2]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:442)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:624)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:559)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:476)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.text.ParseException: ISO8583 MessageFactory has no parsing guide for message type 0036 [0036ISO601000001804823001808801000000000000000000011224500012512245005Test1005Test1005Test1000000003333005Test1005Test2]
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:435)
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:298)
+	at com.github.kpavlov.jreactive8583.netty.codec.Iso8583Decoder.decode(Iso8583Decoder.java:29)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	... 21 more
+17/05/2017 à 08:42:09 [DEBUG] [Slf4JLogger.java:debug:91] [id: 0x6cdb8b3b, L:/192.168.11.51:61773 - R:/192.168.11.51:1011] EXCEPTION: java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1100)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:372)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:624)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:559)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:476)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+17/05/2017 à 08:42:09 [DEBUG] [ReconnectOnCloseListener.java:operationComplete:41] Client connection was closed to /192.168.11.51:1011
+17/05/2017 à 08:42:09 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x6cdb8b3b, L:/192.168.11.51:61773 ! R:/192.168.11.51:1011] CLOSE
+17/05/2017 à 08:42:09 [INFO ] [Iso8583Client.java:connectAsync:88] Connecting to /192.168.11.51:1011
+17/05/2017 à 08:42:09 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x93b37097] REGISTERED
+17/05/2017 à 08:42:09 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x93b37097] CONNECT: /192.168.11.51:1011
+17/05/2017 à 08:42:09 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x6cdb8b3b, L:/192.168.11.51:61773 ! R:/192.168.11.51:1011] INACTIVE
+17/05/2017 à 08:42:09 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x6cdb8b3b, L:/192.168.11.51:61773 ! R:/192.168.11.51:1011] UNREGISTERED
+17/05/2017 à 08:42:09 [WARN ] [Slf4JLogger.java:warn:151] An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.io.IOException: Une connexion existante a dû être fermée par l’hôte distant
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1100)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:372)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:123)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:624)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:559)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:476)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+17/05/2017 à 08:42:10 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x93b37097] CLOSE
+17/05/2017 à 08:42:10 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x93b37097] UNREGISTERED
+17/05/2017 à 08:42:10 [INFO ] [Iso8583Client.java:connectAsync:88] Connecting to /192.168.11.51:1011
+17/05/2017 à 08:42:10 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0xe61623ca] REGISTERED
+17/05/2017 à 08:42:10 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0xe61623ca] CONNECT: /192.168.11.51:1011
+17/05/2017 à 08:42:16 [DEBUG] [ConfigParser.java:createFromClasspathConfig:88] ISO8583 Parsing config from classpath file g8583.xml
+17/05/2017 à 08:42:16 [INFO ] [AbstractIso8583Connector.java:init:69] Initializing
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:71] Using SLF4J as the default logging framework
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.eventLoopThreads: 8
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.noUnsafe: false
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:71] sun.misc.Unsafe.theUnsafe: available
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:71] sun.misc.Unsafe.copyMemory: available
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:71] java.nio.Buffer.address: available
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:71] direct buffer constructor: available
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:76] java.nio.Bits.unaligned: available, true
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:76] java.nio.DirectByteBuffer.<init>(long, int): available
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:71] java.nio.ByteBuffer.cleaner(): available
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:71] Platform: Windows
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:76] Java version: 8
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:76] sun.misc.Unsafe: available
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.tmpdir: C:\Users\hp\AppData\Local\Temp (java.io.tmpdir)
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.noPreferDirect: false
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:76] io.netty.maxDirectMemory: 1897922560 bytes
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.noKeySetOptimization: false
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.selectorAutoRebuildThreshold: 512
+17/05/2017 à 08:42:16 [DEBUG] [Slf4JLogger.java:debug:71] org.jctools-core.MpscChunkedArrayQueue: available
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.processId: 4912 (auto-detected)
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Djava.net.preferIPv4Stack: false
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Djava.net.preferIPv6Addresses: false
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:86] Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:81] \proc\sys\net\core\somaxconn: 200 (non-existent)
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.machineId: 3c:d9:2b:ff:fe:25:f6:29 (auto-detected)
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:81] -Dio.netty.leakDetection.level: simple
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:81] -Dio.netty.leakDetection.maxRecords: 4
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.numHeapArenas: 8
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.numDirectArenas: 8
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.pageSize: 8192
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.maxOrder: 11
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.chunkSize: 16777216
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.tinyCacheSize: 512
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.smallCacheSize: 256
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.normalCacheSize: 64
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.cacheTrimInterval: 8192
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.useCacheForAllThreads: true
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.allocator.type: pooled
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.threadLocalDirectBufferSize: 65536
+17/05/2017 à 08:42:17 [DEBUG] [Slf4JLogger.java:debug:76] -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17/05/2017 à 08:42:17 [WARN ] [Slf4JLogger.java:warn:146] Unknown channel option 'TCP_NODELAY' for channel '[id: 0x18f7e5f0]'
+17/05/2017 à 08:42:17 [INFO ] [Iso8583Server.java:lambda$start$0:32] Server is started and listening at /0:0:0:0:0:0:0:0:1011
