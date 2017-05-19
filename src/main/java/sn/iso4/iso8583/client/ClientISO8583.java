@@ -5,16 +5,14 @@
  */
 package sn.iso4.iso8583.client;
 
-import com.github.kpavlov.jreactive8583.client.ClientConfiguration;
 import com.github.kpavlov.jreactive8583.client.Iso8583Client;
 import com.solab.iso8583.IsoMessage;
-import com.solab.iso8583.IsoType;
 import com.solab.iso8583.MessageFactory;
 import com.solab.iso8583.parse.ConfigParser;
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import jdk.nashorn.internal.runtime.regexp.joni.Config;
 import sn.iso4.iso8583.listener.SignOnListener;
+import sn.iso4.iso8583.requetes.BuildRequest;
 import sn.iso4.iso8583.type.ConnexionStatus;
 import sn.iso4.iso8583.type.ConnexionType;
 import sn.iso4.iso8583.type.IsoConfig;
@@ -24,6 +22,7 @@ import sn.iso4.iso8583.utils.SessionList;
 /**
  *
  * @author <ahmet.thiam@wari.com>
+ * @update Harouna SOUMARE 
  */
 public class ClientISO8583 {
 
@@ -53,11 +52,11 @@ public class ClientISO8583 {
             System.out.println("connecte...");
             SessionList.addSession(IsoConfig.SERVER_IP, new Session(IsoConfig.SERVER_IP, 80, IsoConfig.SERVER_IP, IsoConfig.SERVER_PORT, ConnexionStatus.SIGNOFF, ConnexionType.CLIENT2SERVER));
             
-            // - Send first request sign on
-            //IsoMessage msg = BuildRequest.buildSignOnRequestMessage(); //
+            // - Send first request sign on           
+            IsoMessage msg = BuildRequest.buildSignOnRequestMessage(messageFactory);
             
-            IsoMessage msg = messageFactory.newMessage(0x1804);
-            msg.setField(24, IsoType.ALPHA.value("800", 3));
+            //IsoMessage msg = messageFactory.newMessage(0x1804);
+            //msg.setField(24, IsoType.ALPHA.value("800", 3));
             // - Send first request
             //IsoMessage msg = messageFactory.newMessage(0x1804);
             
