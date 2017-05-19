@@ -9,6 +9,7 @@ import com.github.kpavlov.jreactive8583.IsoMessageListener;
 import com.github.kpavlov.jreactive8583.client.Iso8583Client;
 import com.solab.iso8583.IsoMessage;
 import io.netty.channel.ChannelHandlerContext;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import sn.iso4.iso8583.type.ConnexionStatus;
 import sn.iso4.iso8583.utils.SessionList;
@@ -18,11 +19,11 @@ import sn.iso4.iso8583.utils.Util;
  *
  * @author <ahmet.thiam@wari.com>
  */
-public class SignOnListener implements IsoMessageListener<IsoMessage> {
+public class ZpkListener implements IsoMessageListener<IsoMessage> {
 
     private final Iso8583Client<IsoMessage> client;
 
-    public SignOnListener(Iso8583Client<IsoMessage> client) {
+    public ZpkListener(Iso8583Client<IsoMessage> client) {
         this.client = client;
     }
 
@@ -37,8 +38,12 @@ public class SignOnListener implements IsoMessageListener<IsoMessage> {
         if (i.hasField(39)) {
             System.out.println("Field 39 [" + i.getField(39).getValue().toString() + "]");
             if ((i.getType() == 0x1814) && i.getField(39).getValue().toString().equals(Util.GOOD_RESPONSE_1814)) {
+                /*
+                 * on sauvegare la cle zpk
+                 * on lance la dmd de tak pour le cryptage des pin
+                */
                 // si SIGN ON OK on envoi la demande de cle zpk
-                SessionList.updateSession("192.168.11.51", ConnexionStatus.SIGNON);
+                //SessionList.updateSession("192.168.11.51", ConnexionStatus.SIGNON);
             }
         }
         // - send response
@@ -46,9 +51,6 @@ public class SignOnListener implements IsoMessageListener<IsoMessage> {
         ctx.writeAndFlush(msg);
         
         System.out.println(SessionList.getSession("192.168.11.51").getConnexionStatus());
-        
-        //client.shutdown();
-        
         return false;
     }
 

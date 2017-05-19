@@ -12,6 +12,7 @@ import com.solab.iso8583.MessageFactory;
 import com.solab.iso8583.parse.ConfigParser;
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.util.logging.Logger;
 import sn.iso4.iso8583.listener.SignOnListener;
 import sn.iso4.iso8583.requetes.BuildRequest;
 import sn.iso4.iso8583.type.ConnexionStatus;
@@ -19,12 +20,14 @@ import sn.iso4.iso8583.type.ConnexionType;
 import sn.iso4.iso8583.type.IsoConfig;
 import sn.iso4.iso8583.type.Session;
 import sn.iso4.iso8583.utils.SessionList;
+import sn.iso4.iso8583.utils.Util;
 
 /**
  *
  * @author <ahmet.thiam@wari.com>
  * @update Harouna SOUMARE 
  */
+// client Mbaye //192.168.11.214 8583
 public class ClientISO8583 {
 
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -33,7 +36,9 @@ public class ClientISO8583 {
         MessageFactory<IsoMessage> messageFactory = ConfigParser.createFromClasspathConfig("j8583.xml");
 
         // - Create ClientConfiguration
-        final ClientConfiguration configuration = ClientConfiguration.newBuilder()
+        /**/final ClientConfiguration configuration = ClientConfiguration.newBuilder()
+                .withIdleTimeout(60)
+                .withReconnectInterval(10)
                 .withLogSensitiveData(true)
                 .withEchoMessageListener(false)
                 .build();
@@ -52,13 +57,7 @@ public class ClientISO8583 {
             SessionList.addSession(IsoConfig.SERVER_IP, new Session(IsoConfig.SERVER_IP, 80, IsoConfig.SERVER_IP, IsoConfig.SERVER_PORT, ConnexionStatus.SIGNOFF, ConnexionType.CLIENT2SERVER));
             
             // - Send first request sign on           
-            IsoMessage msg = BuildRequest.buildSignOnRequestMessage(messageFactory);
-            
-            //IsoMessage msg = messageFactory.newMessage(0x1804);
-            //msg.setField(24, IsoType.ALPHA.value("800", 3));
-            // - Send first request
-            //IsoMessage msg = messageFactory.newMessage(0x1804);
-            
+            IsoMessage msg = BuildRequest.build1804Message(messageFactory,Util.SIGNON_CODE);           
             client.send(msg);
         } else {
             System.err.println("pas connecté...");

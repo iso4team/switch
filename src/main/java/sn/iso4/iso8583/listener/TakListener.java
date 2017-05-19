@@ -1,28 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package sn.iso4.iso8583.listener;
 
 import com.github.kpavlov.jreactive8583.IsoMessageListener;
 import com.github.kpavlov.jreactive8583.client.Iso8583Client;
 import com.solab.iso8583.IsoMessage;
 import io.netty.channel.ChannelHandlerContext;
-import java.util.logging.Logger;
-import sn.iso4.iso8583.type.ConnexionStatus;
 import sn.iso4.iso8583.utils.SessionList;
 import sn.iso4.iso8583.utils.Util;
 
 /**
  *
- * @author <ahmet.thiam@wari.com>
+ * @author Harouna Soumare <runkaou@gmail.com>
  */
-public class SignOnListener implements IsoMessageListener<IsoMessage> {
+public class TakListener implements IsoMessageListener<IsoMessage> {
 
     private final Iso8583Client<IsoMessage> client;
 
-    public SignOnListener(Iso8583Client<IsoMessage> client) {
+    public TakListener(Iso8583Client<IsoMessage> client) {
         this.client = client;
     }
 
@@ -37,8 +31,9 @@ public class SignOnListener implements IsoMessageListener<IsoMessage> {
         if (i.hasField(39)) {
             System.out.println("Field 39 [" + i.getField(39).getValue().toString() + "]");
             if ((i.getType() == 0x1814) && i.getField(39).getValue().toString().equals(Util.GOOD_RESPONSE_1814)) {
-                // si SIGN ON OK on envoi la demande de cle zpk
-                SessionList.updateSession("192.168.11.51", ConnexionStatus.SIGNON);
+                // sauvegarde du tak la cle pour le cryptage du pin
+                // si on envoi le premier echo test
+                
             }
         }
         // - send response
@@ -46,9 +41,6 @@ public class SignOnListener implements IsoMessageListener<IsoMessage> {
         ctx.writeAndFlush(msg);
         
         System.out.println(SessionList.getSession("192.168.11.51").getConnexionStatus());
-        
-        //client.shutdown();
-        
         return false;
     }
 
