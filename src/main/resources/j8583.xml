@@ -2,73 +2,35 @@
 <!DOCTYPE j8583-config PUBLIC "-//J8583//DTD CONFIG 1.0//EN"
         "http://j8583.sourceforge.net/j8583.dtd">
 <j8583-config>
-
-  
-    <template type="1804">
-        <field num="7" type="DATE10"/>
-        <field num="11" type="NUMERIC" length="6"/>
-        <field num="12" type="DATE12" />
-        <field num="24" type="ALPHA" length="3"/>
-        <field num="25" type="NUMERIC" length="4"/>
-        <field num="33" type="LLVAR" /> 
-        <field num="37" type="NUMERIC" length="12"/>
-        <field num="39" type="NUMERIC" length="3"/>
-        <field num="48" type="LLLVAR" />
-        <field num="128" type="NUMERIC" length="8"/>
-    </template>
-
-    <template type="1814">
-        <field num="7" type="DATE10"/>
-        <field num="11" type="NUMERIC" length="6"/>
-        <field num="12" type="DATE12" />
-        <field num="24" type="ALPHA" length="3"/>
-        <field num="25" type="NUMERIC" length="4"/>
-        <field num="33" type="LLVAR" /> 
-        <field num="37" type="NUMERIC" length="12"/>
-        <field num="39" type="NUMERIC" length="3"/>
-        <field num="48" type="LLLVAR" />
-        <field num="128" type="NUMERIC" length="8"/>
-    </template>
-    
-    <!-- echo request -->
-    <!--template type="0800">
-        <field num="70" type="NUMERIC" length="3">301</field>
-    </template>
-
-    <template type="0810">
-        <field num="39" type="ALPHA" length="2">-1</field>
-        <field num="70" type="NUMERIC" length="3">301</field>
-    </template-->
-
-
-   
     
     <!-- sign-on request -->
     <parse type="1804">
         <field num="2"   type="LLLVAR" length="30"/>
-        <field num="3"  type="NUMERIC" length="6"/>  
+        <field num="3"  type="NUMERIC" length="12"/>  
         <field num="7"   type="DATE10"/>
-        <field num="11"  type="NUMERIC" length="6"/>  
+        <field num="11"  type="NUMERIC" length="12"/>  
         <field num="12"  type="TIME"/>  
-        <field num="24"  type="LLLVAR" length="30"/>
+        <field num="24"  type="ALPHA" length="3"/>
         <field num="25"  type="LLLVAR" length="30"/> 
         <field num="33"  type="LLLVAR" length="30"/> 
         <field num="37"  type="NUMERIC" length="12"/>
-        <field num="48"  type="LLLVAR" length="30"/>
-        <field num="128" type="LLLVAR" length="30"/> 
+        <field num="39"  type="NUMERIC" length="12"/>
+        <field num="48"  type="LLLVAR"/>
+        <field num="128" type="NUMERIC" length="30"/> 
     </parse>
     <parse type="1814">                   
         <field num="2"   type="LLLVAR" length="30"/>
-        <field num="3"  type="NUMERIC" length="6"/>  
+        <field num="3"  type="NUMERIC" length="12"/>  
         <field num="7"   type="DATE10"/>
-        <field num="11"  type="NUMERIC" length="6"/>  
+        <field num="11"  type="NUMERIC" length="12"/>  
         <field num="12"  type="TIME"/>  
-        <field num="24"  type="LLLVAR" length="30"/>
+        <field num="24"  type="ALPHA" length="3"/>
         <field num="25"  type="LLLVAR" length="30"/> 
         <field num="33"  type="LLLVAR" length="30"/> 
         <field num="37"  type="NUMERIC" length="12"/>
-        <field num="48"  type="LLLVAR" length="30"/>
-        <field num="128" type="LLLVAR" length="30"/>                                                                                     
+        <field num="39"  type="NUMERIC" length="12"/>
+        <field num="48"  type="LLLVAR"/>
+        <field num="128" type="NUMERIC" length="30"/>                                                                                     
     </parse>
 
 </j8583-config>
