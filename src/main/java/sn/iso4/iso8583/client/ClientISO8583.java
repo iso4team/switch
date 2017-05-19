@@ -5,16 +5,11 @@
  */
 package sn.iso4.iso8583.client;
 
+import com.github.kpavlov.jreactive8583.client.ClientConfiguration;
 import com.github.kpavlov.jreactive8583.client.Iso8583Client;
-import com.github.kpavlov.jreactive8583.server.ServerConfiguration;
 import com.solab.iso8583.IsoMessage;
 import com.solab.iso8583.MessageFactory;
 import com.solab.iso8583.parse.ConfigParser;
-import io.netty.bootstrap.Bootstrap;
-import io.netty.bootstrap.ServerBootstrap;
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelInboundHandlerAdapter;
-import io.netty.channel.ChannelPipeline;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import sn.iso4.iso8583.listener.SignOnListener;
@@ -38,14 +33,14 @@ public class ClientISO8583 {
         MessageFactory<IsoMessage> messageFactory = ConfigParser.createFromClasspathConfig("j8583.xml");
 
         // - Create ClientConfiguration
-        /*final ClientConfiguration configuration = ClientConfiguration.newBuilder()
+        final ClientConfiguration configuration = ClientConfiguration.newBuilder()
                 .withIdleTimeout(60)
                 .withReconnectInterval(10)
                 .withLogSensitiveData(true)
-                .build();*/
+                .build();
 
         // - Create and init Iso8583Client
-        Iso8583Client<IsoMessage> client = new Iso8583Client<>(new InetSocketAddress(IsoConfig.SERVER_IP, IsoConfig.SERVER_PORT), messageFactory);
+        Iso8583Client<IsoMessage> client = new Iso8583Client<>(new InetSocketAddress(IsoConfig.SERVER_IP, IsoConfig.SERVER_PORT), configuration, messageFactory);
         // - Add listeners
         client.addMessageListener(new SignOnListener(client));
         client.getConfiguration().replyOnError();
