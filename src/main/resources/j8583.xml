@@ -122,6 +122,7 @@
         <field num="7"   type="DATE10"/>
         <field num="11"  type="NUMERIC" length="6"/>  
         <field num="12"  type="TIME"/>  
+        <field num="24"  type="LLLVAR" length="30"/>
         <field num="25"  type="LLLVAR" length="30"/> 
         <field num="33"  type="LLLVAR" length="30"/> 
         <field num="37"  type="NUMERIC" length="12"/>
@@ -134,6 +135,7 @@
         <field num="7"   type="DATE10"/>
         <field num="11"  type="NUMERIC" length="6"/>  
         <field num="12"  type="TIME"/>  
+        <field num="24"  type="LLLVAR" length="30"/>
         <field num="25"  type="LLLVAR" length="30"/> 
         <field num="33"  type="LLLVAR" length="30"/> 
         <field num="37"  type="NUMERIC" length="12"/>
