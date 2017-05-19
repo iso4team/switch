@@ -34,9 +34,8 @@ public class ClientISO8583 {
 
         // - Create ClientConfiguration
         final ClientConfiguration configuration = ClientConfiguration.newBuilder()
-                .withIdleTimeout(60)
-                .withReconnectInterval(10)
                 .withLogSensitiveData(true)
+                .withEchoMessageListener(false)
                 .build();
 
         // - Create and init Iso8583Client

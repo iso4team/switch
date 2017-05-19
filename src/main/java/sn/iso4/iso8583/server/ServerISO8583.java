@@ -7,6 +7,7 @@ package sn.iso4.iso8583.server;
 
 import com.github.kpavlov.jreactive8583.IsoMessageListener;
 import com.github.kpavlov.jreactive8583.server.Iso8583Server;
+import com.github.kpavlov.jreactive8583.server.ServerConfiguration;
 import com.solab.iso8583.IsoMessage;
 import com.solab.iso8583.IsoType;
 import com.solab.iso8583.MessageFactory;
@@ -30,29 +31,35 @@ public class ServerISO8583 {
         messageFactory.setAssignDate(true);
         messageFactory.setTraceNumberGenerator(new SimpleTraceGenerator((int) (System.currentTimeMillis() % 1000000)));
 
-        final Iso8583Server<IsoMessage> server = new Iso8583Server<>(1011, messageFactory);
+         // - Create ClientConfiguration
+        final ServerConfiguration configuration = ServerConfiguration.newBuilder()
+                .withLogSensitiveData(true)
+                .withEchoMessageListener(false)
+                .build();
+        
+        final Iso8583Server<IsoMessage> server = new Iso8583Server<>(1011, configuration, messageFactory);
 
         server.addMessageListener(new IsoMessageListener<IsoMessage>() {
 
             @Override
             public boolean applies(IsoMessage t) {
-                return true;
+                return t.getType() ==  0x1804;
             }
 
             @Override
             public boolean onMessage(ChannelHandlerContext chc, IsoMessage t) {
                 System.out.println(String.format("message [%d] reçu", t.getType()));
 
-                final IsoMessage msg = server.getIsoMessageFactory().createResponse(t);
-                msg.setField(24, IsoType.ALPHA.value("800", 3));
+                final IsoMessage msg = server.getIsoMessageFactory().newMessage(0x1814);
+                msg.setField(24, IsoType.ALPHA.value("500", 3));
                 msg.setField(39, IsoType.ALPHA.value("000", 3));
                 chc.writeAndFlush(msg);
-                return true;
+                
+                return false;
             }
 
         });
 
-        server.getConfiguration().setReplyOnError(true);
         server.init();
         server.start();
         if (server.isStarted()) {

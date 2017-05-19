@@ -9,8 +9,6 @@ import com.github.kpavlov.jreactive8583.IsoMessageListener;
 import com.github.kpavlov.jreactive8583.client.Iso8583Client;
 import com.solab.iso8583.IsoMessage;
 import io.netty.channel.ChannelHandlerContext;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import sn.iso4.iso8583.type.ConnexionStatus;
 import sn.iso4.iso8583.utils.SessionList;
 
@@ -46,6 +44,9 @@ public class SignOnListener implements IsoMessageListener<IsoMessage> {
         ctx.writeAndFlush(msg);
         
         System.out.println(SessionList.getSession("192.168.11.51").getConnexionStatus());
+        
+        //client.shutdown();
+        
         return false;
     }
 
