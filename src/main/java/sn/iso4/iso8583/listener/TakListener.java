@@ -30,7 +30,7 @@ public class TakListener implements IsoMessageListener<IsoMessage> {
         if (i.hasField(39)) {
             System.out.println("Field 39 [" + i.getField(39).getValue().toString() + "]");
             if ((i.getType() == 0x1814) && i.getField(39).getValue().toString().equals("800")) {
-                // sauvegarde du tak 
+                // sauvegarde du tak la cle pour le cryptage du pin
                 // si on envoi le premier echo test
                 
             }
