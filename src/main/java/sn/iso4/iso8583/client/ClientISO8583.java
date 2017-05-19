@@ -5,12 +5,19 @@
  */
 package sn.iso4.iso8583.client;
 
+import com.github.kpavlov.jreactive8583.ConnectorConfigurer;
 import com.github.kpavlov.jreactive8583.client.ClientConfiguration;
 import com.github.kpavlov.jreactive8583.client.Iso8583Client;
+import com.github.kpavlov.jreactive8583.server.ServerConfiguration;
 import com.solab.iso8583.IsoMessage;
 import com.solab.iso8583.IsoType;
 import com.solab.iso8583.MessageFactory;
 import com.solab.iso8583.parse.ConfigParser;
+import io.netty.bootstrap.Bootstrap;
+import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
+import io.netty.channel.ChannelPipeline;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import jdk.nashorn.internal.runtime.regexp.joni.Config;
@@ -43,7 +50,6 @@ public class ClientISO8583 {
         Iso8583Client<IsoMessage> client = new Iso8583Client<>(new InetSocketAddress(IsoConfig.SERVER_IP, IsoConfig.SERVER_PORT), messageFactory);
         // - Add listeners
         client.addMessageListener(new SignOnListener(client));
-        
         client.getConfiguration().replyOnError();
         client.init();
         client.connect();
