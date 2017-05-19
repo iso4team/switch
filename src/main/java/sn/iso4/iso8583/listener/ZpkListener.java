@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import sn.iso4.iso8583.type.ConnexionStatus;
 import sn.iso4.iso8583.utils.SessionList;
+import sn.iso4.iso8583.utils.Util;
 
 /**
  *
@@ -36,7 +37,7 @@ public class ZpkListener implements IsoMessageListener<IsoMessage> {
         System.out.println("reponse server reçu...");
         if (i.hasField(39)) {
             System.out.println("Field 39 [" + i.getField(39).getValue().toString() + "]");
-            if ((i.getType() == 0x1814) && i.getField(39).getValue().toString().equals("800")) {
+            if ((i.getType() == 0x1814) && i.getField(39).getValue().toString().equals(Util.GOOD_RESPONSE_1814)) {
                 /*
                  * on sauvegare la cle zpk
                  * on lance la dmd de tak pour le cryptage des pin

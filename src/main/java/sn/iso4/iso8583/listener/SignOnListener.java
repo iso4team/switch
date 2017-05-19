@@ -9,10 +9,10 @@ import com.github.kpavlov.jreactive8583.IsoMessageListener;
 import com.github.kpavlov.jreactive8583.client.Iso8583Client;
 import com.solab.iso8583.IsoMessage;
 import io.netty.channel.ChannelHandlerContext;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import sn.iso4.iso8583.type.ConnexionStatus;
 import sn.iso4.iso8583.utils.SessionList;
+import sn.iso4.iso8583.utils.Util;
 
 /**
  *
@@ -36,7 +36,7 @@ public class SignOnListener implements IsoMessageListener<IsoMessage> {
         System.out.println("reponse server reçu...");
         if (i.hasField(39)) {
             System.out.println("Field 39 [" + i.getField(39).getValue().toString() + "]");
-            if ((i.getType() == 0x1814) && i.getField(39).getValue().toString().equals("800")) {
+            if ((i.getType() == 0x1814) && i.getField(39).getValue().toString().equals(Util.GOOD_RESPONSE_1814)) {
                 // si SIGN ON OK on envoi la demande de cle zpk
                 SessionList.updateSession("192.168.11.51", ConnexionStatus.SIGNON);
             }

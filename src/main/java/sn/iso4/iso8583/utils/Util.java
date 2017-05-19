@@ -20,6 +20,10 @@ import com.solab.iso8583.impl.SimpleTraceGenerator;
  */
 
 public class Util {
+    public static String SIGNON_CODE = "801";
+    public static String ECHOTEST_CODE = "803";
+    
+    public static String GOOD_RESPONSE_1814 = "800";
     
 	public static  String getNow2(){
 		String dateStr="";
@@ -45,6 +49,7 @@ public class Util {
 	public static String generateStan(int... taille){
 		int len =  taille.length>0 ?6:taille[0];
 		int ret=new SimpleTraceGenerator((int)(System.currentTimeMillis() % 10000)).nextTrace();
+                System.out.println("sn.iso4.iso8583.utils.Util.generateStan()" +ret);
 		return xLeftPad(len, '0', ""+ret);
 	}
 	public static String xLeftPad(int xlenght_must,char xch,String xstr){

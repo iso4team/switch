@@ -6,6 +6,7 @@ import com.github.kpavlov.jreactive8583.client.Iso8583Client;
 import com.solab.iso8583.IsoMessage;
 import io.netty.channel.ChannelHandlerContext;
 import sn.iso4.iso8583.utils.SessionList;
+import sn.iso4.iso8583.utils.Util;
 
 /**
  *
@@ -29,7 +30,7 @@ public class TakListener implements IsoMessageListener<IsoMessage> {
         System.out.println("reponse server reçu...");
         if (i.hasField(39)) {
             System.out.println("Field 39 [" + i.getField(39).getValue().toString() + "]");
-            if ((i.getType() == 0x1814) && i.getField(39).getValue().toString().equals("800")) {
+            if ((i.getType() == 0x1814) && i.getField(39).getValue().toString().equals(Util.GOOD_RESPONSE_1814)) {
                 // sauvegarde du tak la cle pour le cryptage du pin
                 // si on envoi le premier echo test
                 
