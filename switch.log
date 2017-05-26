@@ -15595,3 +15595,71 @@ Caused by: java.text.ParseException: Insufficient data for LLLVAR field 48, pos 
 	... 21 more
 19/05/2017 à 17:27:06 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x1c250c05, L:/192.168.11.51:1011 ! R:/192.168.11.168:33545] INACTIVE
 19/05/2017 à 17:27:06 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x1c250c05, L:/192.168.11.51:1011 ! R:/192.168.11.168:33545] UNREGISTERED
+19/05/2017 à 17:31:20 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x13c438a5, L:/192.168.11.51:1011 - R:/192.168.11.168:43449] REGISTERED
+19/05/2017 à 17:31:20 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x13c438a5, L:/192.168.11.51:1011 - R:/192.168.11.168:43449] ACTIVE
+19/05/2017 à 17:31:20 [DEBUG] [Slf4JLogger.java:debug:91] [id: 0x13c438a5, L:/192.168.11.51:1011 - R:/192.168.11.168:43449] EXCEPTION: io.netty.handler.codec.DecoderException: java.text.ParseException: Insufficient data for LLLVAR field 48, pos 115
+io.netty.handler.codec.DecoderException: java.text.ParseException: Insufficient data for LLLVAR field 48, pos 115
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:442)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:624)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:559)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:476)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.text.ParseException: Insufficient data for LLLVAR field 48, pos 115
+	at com.solab.iso8583.parse.LllvarParseInfo.parse(LllvarParseInfo.java:54)
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:500)
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:298)
+	at com.github.kpavlov.jreactive8583.netty.codec.Iso8583Decoder.decode(Iso8583Decoder.java:29)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	... 21 more
+19/05/2017 à 17:31:20 [WARN ] [Slf4JLogger.java:warn:151] An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: java.text.ParseException: Insufficient data for LLLVAR field 48, pos 115
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:442)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:248)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1334)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:926)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:624)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:559)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:476)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.text.ParseException: Insufficient data for LLLVAR field 48, pos 115
+	at com.solab.iso8583.parse.LllvarParseInfo.parse(LllvarParseInfo.java:54)
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:500)
+	at com.solab.iso8583.MessageFactory.parseMessage(MessageFactory.java:298)
+	at com.github.kpavlov.jreactive8583.netty.codec.Iso8583Decoder.decode(Iso8583Decoder.java:29)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:411)
+	... 21 more
+19/05/2017 à 17:32:31 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0xb9841132, L:/192.168.11.51:1011 ! R:/192.168.11.168:60218] INACTIVE
+19/05/2017 à 17:32:31 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0xb9841132, L:/192.168.11.51:1011 ! R:/192.168.11.168:60218] UNREGISTERED
+19/05/2017 à 17:32:31 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x13c438a5, L:/192.168.11.51:1011 ! R:/192.168.11.168:43449] INACTIVE
+19/05/2017 à 17:32:31 [DEBUG] [Slf4JLogger.java:debug:71] [id: 0x13c438a5, L:/192.168.11.51:1011 ! R:/192.168.11.168:43449] UNREGISTERED
