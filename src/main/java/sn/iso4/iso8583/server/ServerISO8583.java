@@ -25,7 +25,7 @@ public class ServerISO8583 {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        final MessageFactory<IsoMessage> messageFactory = ConfigParser.createFromClasspathConfig("j8583.xml");
+        final MessageFactory<IsoMessage> messageFactory = ConfigParser.createFromClasspathConfig("g8583.xml");
         messageFactory.setCharacterEncoding(StandardCharsets.US_ASCII.name());
         messageFactory.setUseBinaryMessages(false);
         messageFactory.setAssignDate(true);
@@ -52,7 +52,7 @@ public class ServerISO8583 {
 
                 final IsoMessage msg = server.getIsoMessageFactory().newMessage(0x1814);
                 msg.setField(24, IsoType.ALPHA.value("500", 3));
-                msg.setField(39, IsoType.ALPHA.value("000", 3));
+                msg.setField(39, IsoType.NUMERIC.value("000", 3));
                 chc.writeAndFlush(msg);
                 
                 return false;

@@ -33,7 +33,7 @@ public class ClientISO8583 {
     public static void main(String[] args) throws IOException, InterruptedException {
         
         // - Create messageFactory
-        MessageFactory<IsoMessage> messageFactory = ConfigParser.createFromClasspathConfig("j8583.xml");
+        MessageFactory<IsoMessage> messageFactory = ConfigParser.createFromClasspathConfig("g8583.xml");
 
         // - Create ClientConfiguration
         /**/final ClientConfiguration configuration = ClientConfiguration.newBuilder()

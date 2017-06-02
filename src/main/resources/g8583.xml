@@ -5,8 +5,8 @@
     <!-- This is a test config file -->
 
     <!-- header (1804,1814) -->
-    <header type="1804">1804ISO60100000</header>
-    <header type="1814">1814ISO60100000</header>
+    <header type="1804">1804ISO60100</header>
+    <header type="1814">1814ISO60100</header>
     
     <!-- Template (1804,1814) -->
     <template type="1804">
@@ -18,46 +18,42 @@
         <field num="33"  type="LLLVAR"></field> 
         <field num="37"  type="NUMERIC" length="12"></field>
         <field num="39"  type="NUMERIC" length="3"></field>>
-        <field num="48"  type="LLLVAR"></field>
         <field num="128" type="LLLVAR"></field>
     </template>
     <template type="1814">                   
         <field num="7"   type="DATE10"></field>
         <field num="11"  type="NUMERIC" length="6"></field> 
         <field num="12"  type="TIME"></field>
-        <field num="24"  type="LLLVAR"></field>
-        <field num="25"  type="LLLVAR"></field> 
-        <field num="33"  type="LLLVAR"></field> 
-        <field num="37"  type="NUMERIC" length="12"></field>
+        <field num="24"  type="LLLVAR">TEST001</field>
+        <field num="25"  type="LLLVAR">TEST001</field> 
+        <field num="33"  type="LLLVAR">TEST001</field> 
+        <field num="37"  type="NUMERIC" length="6"></field>
         <field num="39"  type="NUMERIC" length="3"></field>>
-        <field num="48"  type="LLLVAR"></field>
-        <field num="128" type="LLLVAR"></field>                                                                               
+        <field num="128" type="ALPHA" length="6"></field>                                                                               
     </template>
     
     <!-- Parse (1804,1814) -->
     <parse type="1804">
-        <field num="7"   type="DATE10"></field>
+        <field num="7"   type="DATE10" length="10"></field>
         <field num="11"  type="NUMERIC" length="6"></field> 
-        <field num="12"  type="TIME"></field>
-        <field num="24"  type="LLLVAR"></field>
-        <field num="25"  type="LLLVAR"></field> 
-        <field num="33"  type="LLLVAR"></field> 
-        <field num="37"  type="NUMERIC" length="12"></field>
+        <field num="12"  type="DATE12" length="12"></field>
+        <field num="24"  type="ALPHA" length="3"></field>
+        <field num="25"  type="NUMERIC" length="4"></field> 
+        <field num="33"  type="LLVAR"></field> 
+        <field num="37"  type="NUMERIC" length="6"></field>
         <field num="39"  type="NUMERIC" length="3"></field>>
-        <field num="48"  type="LLLVAR"></field>
-        <field num="128" type="LLLVAR"></field>
+        <field num="128" type="ALPHA" length="6"></field>
     </parse>
     <parse type="1814">                   
         <field num="7"   type="DATE10"></field>
         <field num="11"  type="NUMERIC" length="6"></field> 
-        <field num="12"  type="TIME"></field>
-        <field num="24"  type="LLLVAR"></field>
-        <field num="25"  type="LLLVAR"></field> 
-        <field num="33"  type="LLLVAR"></field> 
-        <field num="37"  type="NUMERIC" length="12"></field>
+        <field num="12"  type="DATE12"></field>
+        <field num="24"  type="ALPHA" length="3"></field>
+        <field num="25"  type="NUMERIC" length="4"></field> 
+        <field num="33"  type="LLVAR"></field> 
+        <field num="37"  type="NUMERIC" length="6"></field>
         <field num="39"  type="NUMERIC" length="3"></field>>
-        <field num="48"  type="LLLVAR"></field>
-        <field num="128" type="LLLVAR"></field>                                                                                   
+        <field num="128" type="ALPHA" length="6"></field>                                                                                
     </parse>
 
     
